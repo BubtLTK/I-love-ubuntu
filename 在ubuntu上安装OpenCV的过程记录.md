@@ -12,14 +12,14 @@
 >sudo apt-get upgrade  
 ---  
 ## 安装gcc与g++开发环境  
-先查看下是否已经安装了gcc与g++。 
->gcc --version  
->g++ --version  
-如果未安装。  
->sudo apt-get install build-essential  
-然后查看gcc版本，安装与gcc统一版本的g++。（这里以4.4版本为例，具体情况具体分析）  
->gcc --version  
->sudo apt-get install g++-4.4  
+* 先查看下是否已经安装了gcc与g++。 
+>>gcc --version  
+>>g++ --version  
+* 如果未安装。  
+>>sudo apt-get install build-essential  
+* 然后查看gcc版本，安装与gcc统一版本的g++。（这里以4.4版本为例，具体情况具体分析）  
+>>gcc --version  
+>>sudo apt-get install g++-4.4  
 ---  
 ## 安装构建OpenCV的相关工具  
 >sudo apt-get install cmake git pkg-config   
