@@ -82,27 +82,27 @@
 ---   
 ## 测试   
 * 查看OpenCV的安装库   
->pkg-config opencv --libs   
+>>pkg-config opencv --libs   
 * 查看OpenCV安装版本   
->pkg-config opencv --modversion   
+>>pkg-config opencv --modversion   
 * 运行cpp代码测试  
 * 创建项目目录  
->mkdir opencv_example  
+>>mkdir opencv_example  
 * 将项目代码放入文件夹  
 * 在项目目录下创建cmake编译文件   
->vim CMakeLists.txt  
+>>vim CMakeLists.txt  
 * 在该文件中添加以下内容    
->cmake_minimum_required(VERSION 2.8)  
->project(opencv_example)
->find_package(OpenCV REQUIRED)  
->add_executable(opencv_example opencv_example.cpp)  
->target_link_libraries(opencv_example ${OpenCV_LIBS})   
+>>cmake_minimum_required(VERSION 2.8)  
+>>project(opencv_example)
+>>find_package(OpenCV REQUIRED)  
+>>add_executable(opencv_example opencv_example.cpp)  
+>>target_link_libraries(opencv_example ${OpenCV_LIBS})   
 * 此时在该目录下存在以下的文件： CMakeLists.txt,opencv_example.cpp 。   
 * 编译    
->cmake .   
->make   
+>>cmake .   
+>>make   
 * 运行   
->./opencv_exampel   
+>>./opencv_exampel   
 不出意外，完美运行。。。。。。 
 
 ---   
