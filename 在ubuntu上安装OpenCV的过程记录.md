@@ -69,13 +69,13 @@
 ---  
 ## 配置bash，执行如下命令  
 >sudo gedit /etc/bash.bashrc  
-># 在末尾添加以下内容  
+>#在末尾添加以下内容  
 >PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig/  
 >export PKG_CONFIG_PATH  
 ---  
 ## 保存退出，然后执行如下命令使得配置生效  
 >source /etc/bash.bashrc  
-># 激活配置然后更新database  
+>#激活配置然后更新database  
 >sudo updatedb   
 ---  
 ### 在ubuntu18.04上安装与配置OpenCV3.4.6的过程到此结束。  
