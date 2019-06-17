@@ -93,7 +93,7 @@
 >>vim CMakeLists.txt  
 * 在该文件中添加以下内容    
 >>cmake_minimum_required(VERSION 2.8)  
->>project(opencv_example)
+>>project(opencv_example)  
 >>find_package(OpenCV REQUIRED)  
 >>add_executable(opencv_example opencv_example.cpp)  
 >>target_link_libraries(opencv_example ${OpenCV_LIBS})   
