@@ -60,8 +60,8 @@
 > >error: calling a constexpr host function(“abs”) from a device function(“abs”) is not allowed. The experimental flag ‘–expt-relaxed-constexpr’ can be used to allow this.    
 > >解决方案：  
 > >找到文件opencv-3.4.6/modules/core/include/opencv2/core/cuda/vec_math.hpp，对vec_math.hpp做如下修改(把203行和205行的 ::abs 注释掉)：   
-> >203行的“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, ::abs, char, char)”改为“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, /*::abs*/, char, char)”；  
-> >205行的“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, ::abs, short, short)”改为“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, /*::abs*/, short, short)”。   
+> >203行的“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, ::abs, char, char)”改为“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, /\*::abs\*/, char, char)”；  
+> >205行的“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, ::abs, short, short)”改为“CV_CUDEV_IMPLEMENT_VEC_UNARY_FUNC(abs, /\*::abs\*/, short, short)”。   
 > >最后重新sudo make    
 ---  
 ## 安装  
