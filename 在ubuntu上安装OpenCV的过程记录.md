@@ -52,7 +52,7 @@
 >cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_TIFF=ON -D WITH_TBB=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D WITH_CUDA=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D CUDA_NVCC_FLAGS="-D_FORCE_INLINES" -D WITH_CUBLAS=1 \..   
 > >特别注意！特别注意！特别注意！  
 > >BUILD_TIFF=ON这个设置很重要。笔者一开始没有设置这个参数，导致在make编译过程中，进行到Linking CXX executable时疯狂抛/usr/lib/libopencv_highgui.so.2.4: undefined reference to TIFFRGBAImageOK@LIBTIFF_4.0'等类似错误，设置该参数后便会自动编译libtiff4来消除错误。  
-> >如果OpenCV不需要支持CUDA的情况下，则将cmake命令改为”cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_TIFF=ON“，加快编译速度。  
+> >如果OpenCV不需要支持CUDA的情况下，则将cmake命令改为"cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_TIFF=ON .."，加快编译速度。  
 ---  
 ## Make编译  
 >sudo make  
