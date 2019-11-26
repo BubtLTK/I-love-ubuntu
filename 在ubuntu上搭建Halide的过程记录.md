@@ -36,7 +36,17 @@ make的过程中可能会出现很迷的错误，会在进度到90%多的时候�
 但是跑程序测试的时候又TM的报错了（/usr/bin/x86_64-linux-gnu-ld: 找不到 -lHalide），就知道没这么简单...但是不慌！虽然这个也是找不到动态库的问题，但是这个和直接make报错的不一样，在本次make目录下的lib目录里，存在着libHalide.so文件，这不就是我们要找的动态链接共享库嘛！二话不说，直接将该文件cp到/usr/lib目录下（懒）。再次测试程序，成功！！！  
    
 ---  
+## PS：征服了Ubuntu18.04，再去征服一下实验室的Ubuntu16.04，而且实验室的系统是新装的，应该相对容易些。^_^      
+果然，遇到的问题都是找不到库之类的（/usr/bin/ld：找不到 -lXXXX)，只要安装对应的依赖库即可；笔者对这次的问题以及解决过程做一下记录。   
+> * /usr/bin/ld：找不到 -lz    
+ 解决命令：sudo apt-get install zlib1g-dev    
+> * /usr/bin/ld：找不到 -ltinfo   
+ 解决命令：sudo apt-get install libtinfo-dev     
+> * /usr/bin/ld：找不到 -lxml2     
+ 解决命令：sudo apt-get install libxml2-dev      
+
+---  
 ### 虽然篇幅不长，但这环境的搭建还是卡了笔者一整天的时间，毕竟Halide在国内的相关教程较少，笔者只能自己摸索。（留下英语菜鸟的泪水）  
-#### PS:佛系的力量果然强大～     
+#### PPS:佛系的力量果然强大～     
 ---   
 # END  
